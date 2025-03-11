@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --body-background: black;
+    --body-color: white;
+
+    --seat-background-color: #761818;
+
+    --selected-background-color: orange;
+
+    --booked-background-color: red;
+
+    --seat-booked-hover-background-color: gray;
+
+    --popup-background-color: rgba(128, 128, 128, 0.408);
+
+    --highlight-background-color: #76181800;
+    --highlight-border: rgb(240, 12, 50);
+}
+
+body {
+    background: var(--body-background);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--body-color);
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 4px 4px 4px #CE5937;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
+.cinema {
+    width: 600px;
+    margin: 60px auto;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.cell {
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+.seat {
+    background-color: var(--seat-background-color);
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 2px 7px 10px 2px #675858;
+}
+
+.selected {
+    background-color: var(--selected-background-color);
+}
+
+.booked {
+    background-color: var(--booked-background-color);
+    transition: 0.5s;
+}
+
+.seat.booked:hover {
+    background-color: var(--seat-booked-hover-background-color);
+    cursor: not-allowed;
+}
+
+.popup {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    background-color: var(--popup-background-color);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.popup .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.popup button:hover {
+    cursor: pointer;
+    font-size: 15px;
+    border: solid 2px white;
+}
+
+.seat:hover {
+    border: solid 2px rgb(247, 237, 237);
+}
+
+.btn-book-seat {
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+    color: white;
+    background-color: transparent;
+    border: rgba(255, 255, 255, 0.384) 1px solid;
+
+}
+
+.highlight-btn {
+    border-radius: 5px;
+    display: block;
+    width: 80%;
+    margin: 8px auto;
+    padding: 5px;
+    color: white;
+    background-color: transparent;
+    border: rgba(255, 255, 255, 0.384) 1px solid;
+}
+
+.highlight {
+    background-color: var(--highlight-background-color);
+    border: solid 1px var(--highlight-border);
+}
+
+.highlight-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pointer {
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+.img {
+    margin-top: 10%;
+    width: 500px;
+}
